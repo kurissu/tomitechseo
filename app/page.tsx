@@ -16,7 +16,7 @@ export default function Home() {
     <main className="flex w-full h-[100vh] flex-col items-center justify-between">
 
       {/* navbar section */}
-      <div className="fixed align-middle z-10 hover:bg-white hover:text-black duration-700 w-full h-[70px]">
+      <div className="fixed align-middle z-10 text-white hover:bg-white hover:text-black duration-700 w-full h-[70px]">
       <nav className="flex justify-around space-x-12">
       <h1 className="text-3xl font-bold align-bottom">TomiTech24</h1>
 

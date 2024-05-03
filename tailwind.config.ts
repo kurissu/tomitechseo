@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage:{
+        'default': "url('/images/TOMITECH24.svg')",
+        'evs': "url('/images/EVS_bg.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -74,7 +78,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animated")],
 } satisfies Config
 
 export default config

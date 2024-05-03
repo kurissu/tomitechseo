@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 const service = () => {
   return (
-    <div className="grid grid-cols-4 text-center border-2 border-red-500 w-[1200px] h-[600px] ">
+    <div className="grid grid-cols-4 text-center text-white w-[1200px] h-[600px] ">
       {/* <h1 className="text-3xl font-bold underline">service</h1> */}
       <Link href="/service/mini-game" className="grid [grid-template-columns:1fr] overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700">
