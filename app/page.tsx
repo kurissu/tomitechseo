@@ -1,22 +1,20 @@
+import GameAnimation from "@/components/game-animation";
+import GamePage from "@/components/game-page";
+import OfficeMap from "@/components/office-map";
 import Image from "next/image";
 import Link from 'next/link'
 // import videoBg from '@/assets/video-bg.mp4'
-const videoJsOptions = {
-  sources: [
-    {
-      src: "//vjs.zencdn.net/v/oceans.mp4",
-      type: "video/mp4"
-    }
-  ]
-};
+
 
 
 export default function Home() {
   return (
-    <main className="flex w-full h-[100vh] flex-col items-center justify-between">
+    <main className="snap-y snap-mandatory h-screen w-screen overflow-scroll">
+    {/* Landing page */}
+      <section className="relative snap-always snap-start flex w-screen h-screen flex-col items-center justify-between">
 
       {/* navbar section */}
-      <div className="fixed align-middle z-10 text-white hover:bg-white hover:text-black duration-700 w-full h-[70px]">
+      <div className="absolute align-middle z-10 text-white hover:bg-white hover:text-black duration-700 w-full">
       <nav className="flex justify-around space-x-12">
       <h1 className="text-3xl font-bold align-bottom">TomiTech24</h1>
 
@@ -38,9 +36,20 @@ export default function Home() {
       </nav>
         </div>
 
-    {/* Landing page */}
     <video src="videoBg.mp4" className="w-full h-full object-cover z-0" autoPlay muted loop></video>
-
+      </section>
+      {/* Game Pages */}
+      <section className="snap-start w-screen h-screen">
+        <GamePage/>
+      </section>
+      {/* Office Map */}
+      <section className="snap-center w-screen h-screen">
+        <OfficeMap/>
+      </section>
+      {/* Game Animation Page */}
+      <section className="snap-center w-screen h-screen">
+        <GameAnimation/>
+      </section>
 
 
     </main>
