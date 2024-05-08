@@ -1,6 +1,9 @@
 import GameAnimation from "@/components/game-animation";
 import GamePage from "@/components/game-page";
+import LogoCarousel from "@/components/logo-carousel";
 import OfficeMap from "@/components/office-map";
+import OurFranchises from "@/components/our-franchises";
+import ServiceBanner from "@/components/service-banner";
 import Image from "next/image";
 import Link from 'next/link'
 // import videoBg from '@/assets/video-bg.mp4'
@@ -49,6 +52,12 @@ export default function Home() {
       {/* Game Animation Page */}
       <section className="snap-center w-screen h-screen">
         <GameAnimation/>
+      </section>
+      <section className="snap-center w-screen h-screen">
+        <ServiceBanner/>
+      </section>
+      <section className="snap-center w-screen h-screen">
+        <OurFranchises/>
       </section>
 
 
