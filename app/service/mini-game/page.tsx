@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import  { useState } from "react";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-const miniGame = () => {
+const MiniGame = () => {
   const [isShown, setIsShown] = useState(false);
   return (
     <div className="w-full h-[100vh] bg-[#171614]">
@@ -40,4 +40,4 @@ const miniGame = () => {
   );
 };
 
-export default miniGame;
+export default MiniGame;
