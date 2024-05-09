@@ -20,7 +20,7 @@ export default function LogoCarousel() {
       <ul className="flex items-center justify-center md:justify-start [&_li]:mx-1 [&_img]:max-w-none animate-infinite-scroll">
         {tagline.split(" ").map((word, index) => (
           <li key={index}>
-            <div className='text-white'>{word}</div>
+            {/* <div className='text-white'>{word}</div> */}
           </li>
         ))}
       </ul>

@@ -1,3 +1,4 @@
+'use client'
 import GameAnimation from "@/components/game-animation";
 import GamePage from "@/components/game-page";
 import LogoCarousel from "@/components/logo-carousel";
@@ -5,7 +6,11 @@ import OfficeMap from "@/components/office-map";
 import OurFranchises from "@/components/our-franchises";
 import ServiceBanner from "@/components/service-banner";
 import Image from "next/image";
+import AnimationFour from "@/components/animation-four"
+import AnimationOne from "@/components/animation-one/animation-one";
 import Link from 'next/link'
+import AnimationTwo from "@/components/animation-two/animation-two";
+import AnimationThree from "@/components/animation-three/animation-three";
 // import videoBg from '@/assets/video-bg.mp4'
 
 
@@ -58,6 +63,18 @@ export default function Home() {
       </section>
       <section className="snap-center w-screen h-screen">
         <OurFranchises/>
+      </section>
+      <section className="snap-center w-screen h-screen">
+        <AnimationOne/>
+      </section>
+      <section className="snap-center w-screen h-screen">
+        <AnimationTwo/>
+      </section>
+      <section className="snap-center w-screen h-screen">
+        <AnimationThree/>
+      </section>
+      <section className="snap-center w-screen h-screen">
+        <AnimationFour/>
       </section>
 
 

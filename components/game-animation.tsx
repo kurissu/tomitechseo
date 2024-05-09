@@ -41,11 +41,16 @@ const GameAnimation = () => {
       )}
       <div className='absolute top-10'>
 
-      <LogoCarousel/>
+      <LogoCarousel></LogoCarousel>
       </div>
       <div className='absolute bottom-0'>
 
-      <LogoCarouselReverse/>
+      <LogoCarouselReverse>
+      {!freezeImg && (
+      <Button className='text-white' onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)} onClick={() => whenClick()}>EVERSOUL</Button>
+      )}
+      </LogoCarouselReverse>
       </div>
 
     </div>  )
