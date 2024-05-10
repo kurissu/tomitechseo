@@ -8,7 +8,7 @@ const AnimationOne = () => {
 
   return (
     <>
-        <Script src="http://localhost:3000/scripts/easeljs-0.7.1.min.js"></Script>
+        <Script src='https://code.createjs.com/easeljs-0.7.1.min.js'></Script>
     <Script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></Script>
     <div id='example'>
         <canvas id="projector">Your browser does not support the Canvas element.</canvas>
