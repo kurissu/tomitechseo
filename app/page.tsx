@@ -11,6 +11,7 @@ import AnimationOne from "@/components/animation-one/animation-one";
 import Link from 'next/link'
 import AnimationTwo from "@/components/animation-two/animation-two";
 import AnimationThree from "@/components/animation-three/animation-three";
+import AnimationFive from "@/components/animation-five/animation-five";
 // import videoBg from '@/assets/video-bg.mp4'
 
 
@@ -76,6 +77,10 @@ export default function Home() {
       <section className="snap-center w-screen h-screen">
         <AnimationFour/>
       </section>
+      <section className="snap-center w-screen h-screen">
+        {/* <AnimationFive/> */}
+      </section>
+
 
 
     </main>

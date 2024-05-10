@@ -4,7 +4,7 @@ import Script from 'next/script'
 import './style.css'
 
 
-const TestTwo = () => {
+const AnimationOne = () => {
 
   return (
     <>
@@ -18,4 +18,4 @@ const TestTwo = () => {
 )
 }
 
-export default TestTwo
+export default AnimationOne

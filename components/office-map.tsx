@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import { Button } from "./ui/button";
 const OfficeMap = () => {
   return (
     <div className="grid grid-cols-4 h-[100vh]">
@@ -10,14 +10,22 @@ const OfficeMap = () => {
           <h1 className="text-6xl">MAP</h1>
         </div>
         <ul>
-          <li>ART</li>
-          <li>MARKETING</li>
-          <li>WEB</li>
-          <li>ADMIN</li>
-          <li>PROGRAMMING</li>
-          <li>GAME DESIGN</li>
-          <li>AUDIO</li>
-          <li>KITCHEN</li>
+          <li>
+            <Button>ART</Button></li>
+          <li>
+            <Button>MARKETING</Button></li>
+          <li>
+            <Button>WEB</Button></li>
+          <li>
+            <Button>ADMIN</Button></li>
+          <li>
+            <Button>PROGRAMMING</Button></li>
+          <li>
+            <Button>GAME DESIGN</Button></li>
+          <li>
+            <Button>AUDIO</Button></li>
+          <li>
+            <Button>KITCHEN</Button></li>
         </ul>
       </div>
       <Image

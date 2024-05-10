@@ -3,11 +3,11 @@ import Image from "next/image";
 const OurFranchises = () => {
 
     const games = [
-        { src: '/images/plan8.png', alt: 'Facebook', title: 'title of Our Franchises' },
-        { src: '/images/plan8.png', alt: 'Facebook', title: 'title of Our Franchises' },
-        { src: '/images/plan8.png', alt: 'Facebook', title: 'title of Our Franchises' },
-        { src: '/images/plan8.png', alt: 'Facebook', title: 'title of Our Franchises' },
-        { src: '/images/plan8.png', alt: 'Facebook', title: 'title of Our Franchises' },
+        { src: '/images/franchise-sonic.webp', alt: 'sonic', title: 'title of Our Franchises' },
+        { src: '/images/franchise-fm.webp', alt: 'Facebook', title: 'title of Our Franchises' },
+        { src: '/images/franchise-samba.webp', alt: 'Facebook', title: 'title of Our Franchises' },
+        { src: '/images/franchise-totalwar.webp', alt: 'Facebook', title: 'title of Our Franchises' },
+        { src: '/images/franchise-twopoint.webp', alt: 'Facebook', title: 'title of Our Franchises' },
       ]
   return (
     <div>
@@ -21,6 +21,7 @@ const OurFranchises = () => {
                         width={300}
                         height={300}
                         alt={game.alt}
+                        className="rounded-xl"
                     />
                     <p>{game.title}</p>
                 </div>
