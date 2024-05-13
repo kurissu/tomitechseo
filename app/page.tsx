@@ -12,6 +12,7 @@ import Link from 'next/link'
 import AnimationTwo from "@/components/animation-two/animation-two";
 import AnimationThree from "@/components/animation-three/animation-three";
 import AnimationFive from "@/components/animation-five/animation-five";
+import ParallaxText from "@/components/parallax-text/parallax-text";
 // import videoBg from '@/assets/video-bg.mp4'
 
 
@@ -78,7 +79,7 @@ export default function Home() {
         <AnimationFour/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <AnimationFive/> */}
+        
       </section>
 
 
