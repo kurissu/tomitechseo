@@ -4,14 +4,15 @@ import { useMotionValue, Reorder } from "framer-motion";
 
 interface Props {
   item: string;
+  children: React.ReactNode;
 }
 
-export const Item = ({ item }: Props) => {
+export const Item = ({ children, item }: Props) => {
   const y = useMotionValue(0);
 
   return (
     <Reorder.Item value={item} id={item} style={{  y }}>
-      <span>{item}</span>
+      <span>{children}</span>
     </Reorder.Item>
   );
 };

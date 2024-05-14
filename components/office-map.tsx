@@ -5,7 +5,7 @@ import { Reorder } from "framer-motion";
 import { Item } from "@/components/reorder/item";
 import { useState } from "react";
 
-const initialItems = ["🍅 Tomato", "🥒 Cucumber", "🧀 Cheese",];
+const initialItems = ["/images/plan7.png","/images/plan8.png", "/images/plan9.png",];
 
 
 const OfficeMap = () => {
@@ -96,14 +96,14 @@ const OfficeMap = () => {
           </li>
         </ul>
         <div className="grid">
-          <Button onClick={() => setItems(["🥒 Rooftop","🍅 Second floor", "🧀 First floor",])}>Rooftop</Button>
-          <Button onClick={() => setItems(["🍅 Second floor","🧀 First floor", "🥒 Rooftop",])}>Second floor</Button>
-          <Button onClick={() => setItems(["🧀 First floor", "🥒 Rooftop", "🍅  Second floor"])}>First floor</Button>
+          <Button onClick={() => setItems(["/images/plan8.png","/images/plan7.png", "/images/plan9.png",])}>Rooftop</Button>
+          <Button onClick={() => setItems(["/images/plan7.png","/images/plan9.png", "/images/plan8.png",])}>Second floor</Button>
+          <Button onClick={() => setItems(["/images/plan9.png","/images/plan8.png", "/images/plan7.png",])}>First floor</Button>
         </div>
       </div>
-      <div className="grid col-span-3">
+      <div className="grid col-span-3 relative">
         <div className="relative w-full">
-          <Image
+          {/* <Image
             src="/images/plan7.png"
             className={`absolute ${first} z-20`}
             alt="demo"
@@ -112,7 +112,7 @@ const OfficeMap = () => {
           />
           <Image
             src="/images/plan9.png"
-            className={`absolute z-10 ${second}`}
+            className={`absolute  ${second} z-10 `}
             alt="demo"
             width={1000}
             height={500}
@@ -123,8 +123,25 @@ const OfficeMap = () => {
             alt="demo"
             width={1000}
             height={500}
-          />
+          /> */}
         </div>
+        <Reorder.Group axis="y" onReorder={setItems} values={items}>
+      {items.map((item:any, index) => (
+        <Item key={item} item={item}>
+          <div className="relative w-full">
+            
+          <Image
+        src={item}
+        key={item}
+        alt="demo"
+        width={500}
+        height={500}
+      />
+          </div>
+      </Item>
+        
+      ))}
+    </Reorder.Group>
         <Reorder.Group axis="y" onReorder={setItems} values={items}>
       {items.map((item:any) => (
         <Item key={item} item={item} />
