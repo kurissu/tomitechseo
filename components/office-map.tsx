@@ -125,26 +125,26 @@ const OfficeMap = () => {
             height={500}
           /> */}
         </div>
-        <Reorder.Group axis="y" onReorder={setItems} values={items}>
+        <Reorder.Group axis="y" className="relative" onReorder={setItems} values={items}>
       {items.map((item:any, index) => (
         <Item key={item} item={item}>
-          <div className="relative w-full">
-            
+          {/* <div className="relative w-full">    */}
           <Image
         src={item}
         key={item}
+        className={`absolute mt-[${index * 80}px] z-20`}
         alt="demo"
         width={500}
         height={500}
       />
-          </div>
+          {/* </div> */}
       </Item>
         
       ))}
     </Reorder.Group>
         <Reorder.Group axis="y" onReorder={setItems} values={items}>
-      {items.map((item:any) => (
-        <Item key={item} item={item} />
+      {items.map((item:any,index) => (
+        <Item key={item} item={item}>{index}</Item>
       ))}
     </Reorder.Group>
       </div>

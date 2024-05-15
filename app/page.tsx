@@ -54,7 +54,7 @@ export default function Home() {
       </section>
       {/* Office Map */}
       <section className="snap-center w-screen h-screen">
-        {/* <OfficeMap/> */}
+        <OfficeMap/>
       </section>
       {/* Game Animation Page */}
       <section className="snap-center w-screen h-screen">
@@ -64,7 +64,7 @@ export default function Home() {
         {/* <ServiceBanner/> */}
       </section>
       <section className="snap-center w-screen h-screen">
-        <OurFranchises/>
+        {/* <OurFranchises/> */}
       </section>
       <section className="snap-center w-screen h-screen">
         {/* <AnimationOne/> */}

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import {useState} from 'react'
+import {useState} from 'react';
+import {Button} from "./ui/button";
 const OurFranchises = () => {
 
   const [visible, setVisible] = useState(5);
@@ -78,7 +79,7 @@ const OurFranchises = () => {
                 </div>
             ))
         }
-        <button onClick={showMoreItems}>View more</button>
+        <Button className="flex justify-self-center" onClick={showMoreItems}>View more</Button>
       </div>
     </div>
   );

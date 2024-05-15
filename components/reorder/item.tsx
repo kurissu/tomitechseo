@@ -12,7 +12,7 @@ export const Item = ({ children, item }: Props) => {
 
   return (
     <Reorder.Item value={item} id={item} style={{  y }}>
-      <span>{children}</span>
+      {children}
     </Reorder.Item>
   );
 };
