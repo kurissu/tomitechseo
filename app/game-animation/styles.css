@@ -1,0 +1,117 @@
+.character {
+  position: relative;
+}
+
+.character.show {
+  opacity: 50%;
+  position: absolute;
+  animation: move-up 1s;
+  opacity: 100%;
+  animation-fill-mode: forwards;
+}
+
+.character.hide {
+  position: absolute;
+  animation: move-down 1s;
+  opacity: 50%;
+  animation-fill-mode: forwards;
+}
+
+.modal-left.show {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 100vh solid red;
+  border-right: 100vw solid transparent;
+  animation: modal-left-slide-in 1s;
+  animation-fill-mode: forwards;
+}
+ 
+.modal-left.hide {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 100vh solid red;
+  border-right: 100vw solid transparent;
+  animation: modal-left-slide-out 1s;
+  animation-fill-mode: forwards;
+}
+
+.modal-right.show {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 100vh solid green;
+  border-left: 100vw solid transparent;
+  animation: modal-right-slide-in 1s;
+  animation-fill-mode: forwards;
+}
+
+.modal-right.hide {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 100vh solid green;
+  border-left: 100vw solid transparent;
+  animation: modal-right-slide-out 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes move-up {
+  from {
+    bottom: 0px;
+    opacity: 0;
+  }
+  to {
+    bottom: 60px;
+    opacity: 1;
+  }
+}
+
+@keyframes move-down {
+  from {
+    bottom: 0px;
+    opacity: 1;
+  }
+  to {
+    bottom: 60px;
+    opacity: 0;
+  }
+}
+
+@keyframes modal-left-slide-in {
+  from {
+    right: 1000px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes modal-left-slide-out {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 1000px;
+  }
+}
+
+@keyframes modal-right-slide-in {
+  from {
+    left: 1000px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes modal-right-slide-out {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 1000px;
+  }
+}
