@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import ParallaxText from "./parallax-text/parallax-text";
 import { initialTabs as tabs } from "./test-fruit/images";
 import { initialTabs as tabs2 } from "./test-fruit/background";
 import { motion, AnimatePresence } from "framer-motion";
@@ -41,7 +40,7 @@ const GameAnimation = () => {
     setbgImage(false);
   }
   return (
-    <div className="window relative">
+    <div className="window">
       <main>
         <AnimatePresence mode="wait">
           {selectedTab !== "" && (
@@ -65,13 +64,13 @@ const GameAnimation = () => {
         </AnimatePresence>
       </main>
 
-      <nav className="z-30">
+      <nav>
         <ul>
           {tabs.map((item) => (
             <li
               key={item.alt}
               className={item === selectedTab ? "selected" : ""}
-              onMouseEnter={() => setSelectedTab(item)}
+              onMouseOver={() => setSelectedTab(item)}
               // onClick={() => whenClick()}
               onMouseLeave={() => setSelectedTab("")}
             >
