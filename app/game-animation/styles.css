@@ -21,7 +21,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 100vh solid red;
+  border-top: 100vh solid black;
   border-right: 100vw solid transparent;
   animation: modal-left-slide-in 1s;
   animation-fill-mode: forwards;
@@ -31,7 +31,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 100vh solid red;
+  border-top: 100vh solid black;
   border-right: 100vw solid transparent;
   animation: modal-left-slide-out 1s;
   animation-fill-mode: forwards;
@@ -41,7 +41,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-bottom: 100vh solid green;
+  border-bottom: 100vh solid black;
   border-left: 100vw solid transparent;
   animation: modal-right-slide-in 1s;
   animation-fill-mode: forwards;
@@ -51,7 +51,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-bottom: 100vh solid green;
+  border-bottom: 100vh solid black;
   border-left: 100vw solid transparent;
   animation: modal-right-slide-out 1s;
   animation-fill-mode: forwards;
@@ -94,7 +94,7 @@
     right: 0px;
   }
   to {
-    right: 1000px;
+    right: 2600px;
   }
 }
 
@@ -112,6 +112,6 @@
     left: 0px;
   }
   to {
-    left: 1000px;
+    left: 2500px;
   }
 }

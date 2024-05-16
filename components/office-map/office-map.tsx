@@ -1,10 +1,10 @@
 import React from "react";
-import "./reorder/style.css";
+import "@/components/reorder/style.css";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { Reorder } from "framer-motion";
 import { Item } from "@/components/reorder/item";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const initialItems = [
   "/images/plan7.png",
@@ -22,8 +22,8 @@ const OfficeMap = () => {
   const second = " opacity-25 bottom-[220px]";
   const third = "opacity-25 bottom-[140px]";
   return (
-    <div className="grid grid-cols-4 h-[100vh]">
-      <div className="grid w-52 col-span-1">
+    <div className="grid m-44 grid-cols-4 h-[100vh]">
+      <div className="grid w-full col-span-1">
         <div>
           <p className="text-lg">Studio</p>
           <h1 className="text-6xl">MAP</h1>
@@ -101,14 +101,14 @@ const OfficeMap = () => {
           </li>
         </ul>
         <div className="grid grid-cols-2">
-        <div>
+        <div className="flex justify-center ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-20 h-20 fill-[#cfbf9c]"
             viewBox="0 0 90 244"
           >
             <path id="line_1_" d="M27.5 0h5v244h-5z"></path>
-            <g id="lift_1_" className={`translate-y-[${index * 4.8}rem] `}>
+            <g id="lift_1_" className={`translate-y-[${index * 4.8}rem]`}>
               <path
                 className={index === 0 ? `opacity-25` : ``}
                 id="arrow-top_1_"
@@ -126,7 +126,7 @@ const OfficeMap = () => {
             </g>
           </svg>
         </div>
-          <div className="text-[#cfbf9c]">
+          <div className=" grid text-[#cfbf9c] h-52">
           <Button
           variant={"link"}
           className={`hover:no-underline hover:text-[#cfbf9c] ${index === 0 ? `text-[20px] text-[#cfbf9c]` : ``}`}
@@ -177,7 +177,7 @@ const OfficeMap = () => {
     
         </div>
       </div>
-      <div className="grid col-span-3">
+      <div className="grid col-span-3 relative">
         {/* <div className="relative w-full"> */}
         {/* <Image
             src="/images/plan7.png"
@@ -203,10 +203,11 @@ const OfficeMap = () => {
         {/* </div> */}
         <Reorder.Group
           axis="y"
-          className="relative"
+          className="relative w-full"
           onReorder={setItems}
           values={items}
         >
+          
           {items.map((item: any, index) => (
             <Item key={item} item={item}>
               <div className=" w-full">
@@ -214,13 +215,24 @@ const OfficeMap = () => {
                   src={item}
                   key={item}
                   alt="demo"
-                  width={1000}
+                  className="w-full h-full"
+                  width={5000}
                   height={500}
                 />
               </div>
             </Item>
           ))}
+          
+          
         </Reorder.Group>
+        <div className="absolute z-50 top-0 left w-full h-full ">
+            <Image src={'/images/art.jpg'} width={500} height={200} alt={'demo'}/>
+            <div className="absolute p-5 bottom-5 left-5 w-[450px] h-[500px] bg-white ">
+              <Button className="absolute text-[#cfbf9c] right-5">X</Button>
+              <h5 className=" text-[#cfbf9c] top-15">ART</h5>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
         
         
       </div>

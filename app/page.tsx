@@ -1,8 +1,8 @@
 'use client'
-import GameAnimation from "@/components/game-animation";
+import GameAnimation from "@/app/game-animation/page";
 import GamePage from "@/components/game-page";
 import LogoCarousel from "@/components/logo-carousel";
-import OfficeMap from "@/components/office-map";
+import OfficeMap from "@/components/office-map/office-map";
 import OurFranchises from "@/components/our-franchises";
 import ServiceBanner from "@/components/service-banner";
 import Image from "next/image";
