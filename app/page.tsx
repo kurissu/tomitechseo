@@ -24,7 +24,7 @@ export default function Home() {
       <section className="relative snap-always snap-start flex w-screen h-screen flex-col items-center justify-between">
 
       {/* navbar section */}
-      {/* <div className="absolute align-middle z-10 text-white hover:bg-white hover:text-black duration-700 w-full">
+      <div className="absolute align-middle z-10 text-white hover:bg-white hover:text-black duration-700 w-full">
       <nav className="flex justify-around space-x-12">
       <h1 className="text-3xl font-bold align-bottom">TomiTech24</h1>
 
@@ -46,28 +46,28 @@ export default function Home() {
       </nav>
         </div>
 
-    <video src="videoBg.mp4" className="w-full h-full object-cover z-0" autoPlay muted loop></video> */}
+    <video src="videoBg.mp4" className="w-full h-full object-cover z-0" autoPlay muted loop></video>
       </section>
       {/* Game Pages */}
       <section className="snap-start w-screen h-screen">
-        {/* <GamePage/> */}
+        <GamePage/>
       </section>
       {/* Office Map */}
-      <section className="snap-center w-screen h-screen">
+      <section className="snap-start w-screen h-screen">
         <OfficeMap/>
       </section>
       {/* Game Animation Page */}
-      <section className="snap-center w-screen h-screen">
-        {/* <GameAnimation/> */}
+      <section className="snap-start w-screen h-screen">
+        <GameAnimation/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <ServiceBanner/> */}
+        <ServiceBanner/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <OurFranchises/> */}
+        <OurFranchises/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <AnimationOne/> */}
+        <AnimationOne/>
       </section>
       <section className="snap-center w-screen h-screen">
         {/* <AnimationTwo/> */}

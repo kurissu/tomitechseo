@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "./styles.css";
 import { Button } from "@/components/ui/button";
+import ParallaxText from "@/components/parallax-text/parallax-text";
 
 export const allImage = [
   { src: "/images/EVS_bg.png", alt: "eversoul" },
@@ -36,10 +37,6 @@ export default function App() {
       setHoverTab(null);
     }
   };
-  const temp = () => {
-    setHideButton2(false)
-    setHideButton3(false)
-  }
 
   const handleMouseClick = (item) => {
     setHideButton(false);
@@ -73,7 +70,13 @@ export default function App() {
             <li>{item.alt}</li>
           ))}
         </ul>
+        <div className="aboslute z-40">
 
+              <ParallaxText
+            baseVelocity={-.5}
+            children={"Embark on a new adventure today with Tomitech."}
+          />
+        </div>
         <Image
           className={`z-40 character w-[90%] h-[90%] ${
             selectedTab ? "hide" : ""
@@ -117,11 +120,9 @@ export default function App() {
             />
           </div>
         ))}
-      </main>
-
       <div className="w-full absolute bottom-5 z-50 flex flex-row justify-evenly h-16 bg-black-300 ">
         <Button
-          onClick={() => temp()}
+          onClick={() => setHideButton2(false)}
           className={hideButton ? "" : "hidden"}
         >
           <svg
@@ -313,8 +314,11 @@ export default function App() {
             MOBILE<span className="text-white">RPG</span>
           </p>
         </div>
-
-        {tabs.map((item) => (
+        <ParallaxText
+            baseVelocity={1}
+            children={
+              <>
+                {tabs.map((item) => (
           <Button
             key={item.alt}
             className={
@@ -333,7 +337,13 @@ export default function App() {
             ) : null}
           </Button>
         ))}
+              </>
+            }
+          />
+        
       </div>
+      </main>
     </div>
+
   );
 }
