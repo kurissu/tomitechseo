@@ -16,8 +16,9 @@ const OfficeMap = () => {
   const [imgToggle, setImgToggle] = React.useState(0);
   const [items, setItems] = useState(initialItems);
   const [index, setIndex] = useState(0);
-  {console.log(index)}
-
+  {
+    console.log(index);
+  }
 
   return (
     <div className="relative w-screen h-screen">
@@ -29,71 +30,71 @@ const OfficeMap = () => {
 
         <ul className="map-container-list-container">
           <li className="label-list">
-            <label className=" " alt="Art" onClick={() => setImgToggle(0)}>
+            <label className=" " onClick={() => setImgToggle(0)}>
               Art
             </label>
           </li>
           <li className="label-list">
             <label
               className=" "
-              alt="Marketing"
+              
               onClick={() => setImgToggle(1)}
             >
               Marketing
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Marketing">
+            <label className=" ">
               Web
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="HR">
+            <label className=" ">
               Admin
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Production">
+            <label className=" ">
               Producing
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Programming">
+            <label className=" " >
               Programming
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Game design">
+            <label className=" " >
               Game design
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Audio">
+            <label className=" ">
               Audio
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Streaming Room">
+            <label className=" ">
               Streaming Room
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Darts">
+            <label className=" ">
               Darts
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Consoles">
+            <label className=" ">
               Consoles
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="Kitchen">
+            <label className=" ">
               Kitchen
             </label>
           </li>
           <li className="label-list">
-            <label className=" " alt="RoofTopTerrace">
+            <label className=" ">
               Rooftop Terrace
             </label>
           </li>
@@ -126,51 +127,50 @@ const OfficeMap = () => {
           </div>
           <div className="absolute bottom-0 left-24 text-[#cfbf9c] z-50">
             <div className="grid">
-
-            <Button
-              variant={"link"}
-              className={`hover:no-underline hover:text-[#cfbf9c] ${
-                index === 0 ? `text-[20px] text-[#cfbf9c]` : ``
-              }`}
-              onClick={() => {
-                setItems([
-                  "/images/plan8.png",
-                  "/images/plan7.png",
-                  "/images/plan9.png",
-                ]);
-                setIndex(0);
-              }}
-            >
-              Rooftop
-            </Button>
-            <Button
-              variant={"link"}
-              className={`hover:no-underline hover:text-[#cfbf9c] focus:text-[20px] focus:text-[#cfbf9c]`}
-              onClick={() => {
-                setItems([
-                  "/images/plan7.png",
-                  "/images/plan9.png",
-                  "/images/plan8.png",
-                ]);
-                setIndex(1);
-              }}
-            >
-              Second floor
-            </Button>
-            <Button
-              variant={"link"}
-              className={`hover:no-underline hover:text-[#cfbf9c] focus:text-[20px] focus:text-[#cfbf9c]`}
-              onClick={() => {
-                setItems([
-                  "/images/plan9.png",
-                  "/images/plan8.png",
-                  "/images/plan7.png",
-                ]);
-                setIndex(2);
-              }}
-            >
-              First floor
-            </Button>
+              <Button
+                variant={"link"}
+                className={`hover:no-underline hover:text-[#cfbf9c] ${
+                  index === 0 ? `text-[20px] text-[#cfbf9c]` : ``
+                }`}
+                onClick={() => {
+                  setItems([
+                    "/images/plan8.png",
+                    "/images/plan7.png",
+                    "/images/plan9.png",
+                  ]);
+                  setIndex(0);
+                }}
+              >
+                Rooftop
+              </Button>
+              <Button
+                variant={"link"}
+                className={`hover:no-underline hover:text-[#cfbf9c] focus:text-[20px] focus:text-[#cfbf9c]`}
+                onClick={() => {
+                  setItems([
+                    "/images/plan7.png",
+                    "/images/plan9.png",
+                    "/images/plan8.png",
+                  ]);
+                  setIndex(1);
+                }}
+              >
+                Second floor
+              </Button>
+              <Button
+                variant={"link"}
+                className={`hover:no-underline hover:text-[#cfbf9c] focus:text-[20px] focus:text-[#cfbf9c]`}
+                onClick={() => {
+                  setItems([
+                    "/images/plan9.png",
+                    "/images/plan8.png",
+                    "/images/plan7.png",
+                  ]);
+                  setIndex(2);
+                }}
+              >
+                First floor
+              </Button>
             </div>
           </div>
         </div>

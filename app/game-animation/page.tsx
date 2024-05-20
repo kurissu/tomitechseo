@@ -9,36 +9,37 @@ import "./styles.css";
 import { Button } from "@/components/ui/button";
 import ParallaxText from "@/components/parallax-text/parallax-text";
 
-export const allImage = [
-  { src: "/images/EVS_bg.png", alt: "eversoul" },
-  { src: "/images/AA_bg.png", alt: "archage" },
-  { src: "/images/ER_bg_v1.png", alt: "eternal return" },
-  { src: "/images/WF_bg.png", alt: "world flipper" },
-];
+
 
 export default function App() {
-  const [hoverTab, setHoverTab] = useState();
-  const [selectedTab, setSelectedTabTab] = useState();
+  const [hoverTab, setHoverTab] = useState<any>();
+  const [selectedTab, setSelectedTabTab] = useState<any>();
   const [hideButton, setHideButton] = useState(true);
   const [hideButton2, setHideButton2] = useState(true);
   const [hideList, setHideList] = useState(true);
   const [selectedGame, setSelectGame] = useState("");
+  const allImage= [
+    { src: "/images/EVS_bg.png", alt: "eversoul" },
+    { src: "/images/AA_bg.png", alt: "archage" },
+    { src: "/images/ER_bg_v1.png", alt: "eternal return" },
+    { src: "/images/WF_bg.png", alt: "world flipper" },
+  ];
 
-  const handleMouseOver = (item) => {
+  const handleMouseOver = (item:any) => {
     if (!selectedTab) {
       setHoverTab(item);
-      setSelectedTabTab(null);
+      setSelectedTabTab(undefined);
     }
   };
 
   const handleMouseLeave = () => {
     // setHoverTab(null);
     if (!selectedTab) {
-      setHoverTab(null);
+      setHoverTab(undefined);
     }
   };
 
-  const handleMouseClick = (item) => {
+  const handleMouseClick = (item:any) => {
     setHideButton(false);
     setSelectedTabTab(item);
     setSelectGame(item.alt);
@@ -46,8 +47,8 @@ export default function App() {
   };
   const handleClose = () => {
     setHideButton(true);
-    setHoverTab(null);
-    setSelectedTabTab(null);
+    setHoverTab(undefined);
+    setSelectedTabTab(undefined);
   };
 
   return (
@@ -66,16 +67,15 @@ export default function App() {
               : "absolute w-screen h-screen  text-white text-5xl z-50 bg-black"
           }
         >
-          {allImage.map((item, index) => (
-            <li>{item.alt}</li>
+          {allImage.map((item) => (
+            <li key={item.alt}>{item.alt}</li>
           ))}
         </ul>
         <div className="aboslute z-40">
 
               <ParallaxText
             baseVelocity={-.5}
-            children={"Embark on a new adventure today with Tomitech."}
-          />
+          >Embark on a new adventure today with Tomitech.</ParallaxText>
         </div>
         <Image
           className={`z-40 character w-[90%] h-[90%] ${
@@ -94,7 +94,7 @@ export default function App() {
           >
             <Image
               className={`z-40 character w-[90%] h-[90%] ${
-                item.alt === selectedTab?.alt
+                item.alt === (selectedTab?.alt)
                   ? "show"
                   : item.alt === hoverTab?.alt
                   ? "show"
@@ -316,30 +316,26 @@ export default function App() {
         </div>
         <ParallaxText
             baseVelocity={1}
-            children={
-              <>
-                {tabs.map((item) => (
-          <Button
-            key={item.alt}
-            className={
-              hideButton
-                ? "text-xl w-96 h-full bg-black text-white hover:bg-slate-600"
-                : "hidden"
-            }
-            onMouseOver={() => handleMouseOver(item)}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => handleMouseClick(item)}
-          >
-            {item.alt}
 
-            {item === hoverTab ? (
-              <motion.div className="underline" layoutId="underline" />
-            ) : null}
-          </Button>
-        ))}
-              </>
-            }
-          />
+          >{tabs.map((item) => (
+            <Button
+              key={item.alt}
+              className={
+                hideButton
+                  ? "text-xl w-96 h-full bg-black text-white hover:bg-slate-600"
+                  : "hidden"
+              }
+              onMouseOver={() => handleMouseOver(item)}
+              onMouseLeave={handleMouseLeave}
+              onClick={() => handleMouseClick(item)}
+            >
+              {item.alt}
+  
+              {item === hoverTab ? (
+                <motion.div className="underline" layoutId="underline" />
+              ) : null}
+            </Button>
+          ))}</ParallaxText>
         
       </div>
       </main>

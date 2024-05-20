@@ -26,7 +26,7 @@ const GameAnimation = () => {
   const [freezeImg, setFreezeImg] = useState(false);
   const [bgImage, setbgImage] = useState(false);
 
-  const [selectedTab, setSelectedTab] = useState("");
+  const [selectedTab, setSelectedTab] = useState<any>("");
   const [selectedTab2, setSelectedTab2] = useState(tabs2[0]);
 
   function whenClick() {}
