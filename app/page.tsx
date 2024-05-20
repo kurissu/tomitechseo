@@ -70,13 +70,13 @@ export default function Home() {
         <AnimationOne/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <AnimationTwo/> */}
+        <AnimationTwo/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <AnimationThree/> */}
+        <AnimationThree/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <AnimationFour/> */}
+        <AnimationFour/>
       </section>
       <section className="snap-center w-screen h-screen">
         
