@@ -12,8 +12,16 @@ const initialItems = [
   "/images/plan9.png",
 ];
 
+const mapPositions = [
+  { img: "/images/art.jpg", alt: "ART"},
+  { img: "/images/marketing.jpg", alt: "MARKETING"},
+  { img: "/images/prog.jpg", alt: "WEB"},
+  { img: "/images/producer.jpg", alt: "PRODUCER"},
+  { img: "/images/gamedesign.jpg", alt: "GAME DESIGN"},
+];
+
 const OfficeMap = () => {
-  const [imgToggle, setImgToggle] = React.useState(0);
+  const [imgToggle, setImgToggle] = useState(0);
   const [items, setItems] = useState(initialItems);
   const [index, setIndex] = useState(0);
   {
@@ -35,68 +43,42 @@ const OfficeMap = () => {
             </label>
           </li>
           <li className="label-list">
-            <label
-              className=" "
-              
-              onClick={() => setImgToggle(1)}
-            >
+            <label className=" " onClick={() => setImgToggle(1)}>
               Marketing
             </label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Web
-            </label>
+            <label className=" "  onClick={() => setImgToggle(2)}>Web</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Admin
-            </label>
+            <label className=" ">Admin</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Producing
-            </label>
+            <label className=" " onClick={() => setImgToggle(3)}>Producing</label>
           </li>
           <li className="label-list">
-            <label className=" " >
-              Programming
-            </label>
+            <label className=" " onClick={() => setImgToggle(2)}>Programming</label>
           </li>
           <li className="label-list">
-            <label className=" " >
-              Game design
-            </label>
+            <label className=" " onClick={() => setImgToggle(4)}>Game design</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Audio
-            </label>
+            <label className=" ">Audio</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Streaming Room
-            </label>
+            <label className=" ">Streaming Room</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Darts
-            </label>
+            <label className=" ">Darts</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Consoles
-            </label>
+            <label className=" ">Consoles</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Kitchen
-            </label>
+            <label className=" ">Kitchen</label>
           </li>
           <li className="label-list">
-            <label className=" ">
-              Rooftop Terrace
-            </label>
+            <label className=" ">Rooftop Terrace</label>
           </li>
         </ul>
         <div className="relative w-[700px] h-[130px]">
@@ -107,7 +89,7 @@ const OfficeMap = () => {
               viewBox="0 0 90 244"
             >
               <path id="line_1_" d="M27.5 0h5v244h-5z"></path>
-              <g id="lift_1_" className={`translate-y-[${index * 4.8}rem]`}>
+              <g id="lift_1_" transform={`translate(0, ${index * 76.8})`}>
                 <path
                   className={index === 0 ? `opacity-25` : ``}
                   id="arrow-top_1_"
@@ -199,21 +181,20 @@ const OfficeMap = () => {
         </Reorder.Group>
         <div className="absolute z-50 right-0">
           <div className="relative w-[284px] ">
-            <div className="absolute w-[284px] h-[224px] p-3">
-              <Image
-                src={"/images/art.jpg"}
-                width={1000}
-                height={500}
-                alt={"demo"}
-              />
-            </div>
-            <div className="absolute p-5 top-44 right-6 w-[236px] h-[300px] bg-white ">
-              <button className="absolute text-[#cfbf9c] top-1 right-2">
-                X
-              </button>
-              <h5 className=" text-[#cfbf9c] top-15">ART</h5>
-              <p>Lorem ipsum dolor sit amet</p>
-            </div>
+            {/* {mapPositions.map((item, index) => (
+              <> */}
+                <div className="absolute w-[284px] h-[224px] p-3">
+                  <Image src={`${mapPositions[imgToggle].img}`} width={1000} height={500} alt={mapPositions[imgToggle].alt} />
+                </div>
+                <div className="absolute p-5 top-44 right-6 w-[236px] h-[300px] bg-white ">
+                  <button className="absolute text-[#cfbf9c] top-1 right-2">
+                    X
+                  </button>
+                  <h5 className=" text-[#cfbf9c] top-15">{mapPositions[imgToggle].alt}</h5>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              {/* </>
+            ))} */}
           </div>
         </div>
       </div>

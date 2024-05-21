@@ -18,6 +18,7 @@ export default function App() {
   const [hideButton2, setHideButton2] = useState(true);
   const [hideList, setHideList] = useState(true);
   const [selectedGame, setSelectGame] = useState("");
+  const [scrollSpeed, setScrollSpeed] = useState(1);
   const allImage= [
     { src: "/images/EVS_bg.png", alt: "eversoul" },
     { src: "/images/AA_bg.png", alt: "archage" },
@@ -26,6 +27,7 @@ export default function App() {
   ];
 
   const handleMouseOver = (item:any) => {
+    setScrollSpeed(.1)
     if (!selectedTab) {
       setHoverTab(item);
       setSelectedTabTab(undefined);
@@ -34,6 +36,7 @@ export default function App() {
 
   const handleMouseLeave = () => {
     // setHoverTab(null);
+    setScrollSpeed(1)
     if (!selectedTab) {
       setHoverTab(undefined);
     }
@@ -78,7 +81,7 @@ export default function App() {
           >Embark on a new adventure today with Tomitech.</ParallaxText>
         </div>
         <Image
-          className={`z-40 character w-[90%] h-[90%] ${
+          className={`z-40 character w-[90%] h-[100%] ${
             selectedTab ? "hide" : ""
           }`}
           src={"/images/TOMITECH24.svg"}
@@ -315,7 +318,7 @@ export default function App() {
           </p>
         </div>
         <ParallaxText
-            baseVelocity={1}
+            baseVelocity={scrollSpeed}
 
           >{tabs.map((item) => (
             <Button
