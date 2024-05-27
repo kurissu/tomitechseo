@@ -5,6 +5,38 @@ import { Button } from "../ui/button";
 import { Reorder } from "framer-motion";
 import { Item } from "@/components/reorder/item";
 import { useState } from "react";
+import { motion, Variants } from "framer-motion";
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: "-100%",
+    opacity: 0
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      // type: "spring",
+      // bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+const cardVariant2: Variants = {
+  offscreen: {
+    y: "-20%",
+    opacity: 0
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      // type: "spring",
+      // bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 const initialItems = [
   "/images/plan7.png",
@@ -14,53 +46,80 @@ const initialItems = [
 
 const mapPositions = [
   { img: "/images/art.jpg", alt: "ART"},
-  { img: "/images/marketing.jpg", alt: "MARKETING"},
-  { img: "/images/prog.jpg", alt: "WEB"},
-  { img: "/images/producer.jpg", alt: "PRODUCER"},
+  { img: "/images/marketing.jpg", alt: "WEB & MARKETING"},
+  { img: "/images/prog.jpg", alt: "PROGRAMMING"},
+  { img: "/images/producer.jpg", alt: "PRODUCTION"},
   { img: "/images/gamedesign.jpg", alt: "GAME DESIGN"},
 ];
 
 const OfficeMap = () => {
-  const [imgToggle, setImgToggle] = useState(0);
+  const [imgToggle, setImgToggle] = useState<any>(null);
   const [items, setItems] = useState(initialItems);
   const [index, setIndex] = useState(0);
   {
     console.log(index);
   }
+   function roofTop() {
+    setItems([
+      "/images/plan8.png",
+      "/images/plan7.png",
+      "/images/plan9.png",
+    ]);
+    setIndex(0);
+  }
+  function secondFloor() {
+    setItems([
+      "/images/plan7.png",
+      "/images/plan9.png",
+      "/images/plan8.png",
+    ]);
+    setIndex(1);
+  }
+  function firstFloor(){
+    setItems([
+      "/images/plan9.png",
+      "/images/plan8.png",
+      "/images/plan7.png",
+    ]);
+    setIndex(2);
+  }
 
   return (
     <div className="relative w-screen h-screen">
-      <div className="w-[730px] pt-[55px] ml-[230px]">
-        <div>
+      <motion.div className="w-[730px] pt-[55px] ml-[230px]"           initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.8 }}>
+        <motion.div variants={cardVariants}>
           <p className="text-lg">Studio</p>
           <h1 className="text-6xl">MAP</h1>
-        </div>
+        </motion.div>
+        <motion.div variants={cardVariant2}>
 
         <ul className="map-container-list-container">
           <li className="label-list">
-            <label className=" " onClick={() => setImgToggle(0)}>
+            <label className=" " onClick={() => {setImgToggle(0), firstFloor()}}>
               Art
             </label>
           </li>
           <li className="label-list">
-            <label className=" " onClick={() => setImgToggle(1)}>
+            <label className=" " onClick={() => {setImgToggle(1), secondFloor()}}>
               Marketing
             </label>
           </li>
           <li className="label-list">
-            <label className=" "  onClick={() => setImgToggle(2)}>Web</label>
+            <label className=" "  onClick={() => {setImgToggle(1), secondFloor()}}>Web</label>
           </li>
           <li className="label-list">
             <label className=" ">Admin</label>
           </li>
           <li className="label-list">
-            <label className=" " onClick={() => setImgToggle(3)}>Producing</label>
+            <label className=" " onClick={() => {setImgToggle(3), secondFloor()}}>Producing</label>
           </li>
           <li className="label-list">
-            <label className=" " onClick={() => setImgToggle(2)}>Programming</label>
+            <label className=" " onClick={() => {setImgToggle(2), firstFloor()}}>Programming</label>
           </li>
           <li className="label-list">
-            <label className=" " onClick={() => setImgToggle(4)}>Game design</label>
+            <label className=" " onClick={() => {setImgToggle(4), secondFloor()}}>Game design</label>
           </li>
           <li className="label-list">
             <label className=" ">Audio</label>
@@ -81,7 +140,8 @@ const OfficeMap = () => {
             <label className=" ">Rooftop Terrace</label>
           </li>
         </ul>
-        <div className="relative w-[700px] h-[130px]">
+        </motion.div>
+        <motion.div className="relative w-[700px] h-[130px]" variants={cardVariant2}>
           <div className="absolute bottom-0 left-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -115,12 +175,8 @@ const OfficeMap = () => {
                   index === 0 ? `text-[20px] text-[#cfbf9c]` : ``
                 }`}
                 onClick={() => {
-                  setItems([
-                    "/images/plan8.png",
-                    "/images/plan7.png",
-                    "/images/plan9.png",
-                  ]);
-                  setIndex(0);
+                  roofTop();
+                  setImgToggle(null)
                 }}
               >
                 Rooftop
@@ -129,12 +185,8 @@ const OfficeMap = () => {
                 variant={"link"}
                 className={`hover:no-underline hover:text-[#cfbf9c] focus:text-[20px] focus:text-[#cfbf9c]`}
                 onClick={() => {
-                  setItems([
-                    "/images/plan7.png",
-                    "/images/plan9.png",
-                    "/images/plan8.png",
-                  ]);
-                  setIndex(1);
+                  secondFloor();
+                  setImgToggle(null)
                 }}
               >
                 Second floor
@@ -143,20 +195,16 @@ const OfficeMap = () => {
                 variant={"link"}
                 className={`hover:no-underline hover:text-[#cfbf9c] focus:text-[20px] focus:text-[#cfbf9c]`}
                 onClick={() => {
-                  setItems([
-                    "/images/plan9.png",
-                    "/images/plan8.png",
-                    "/images/plan7.png",
-                  ]);
-                  setIndex(2);
+                  firstFloor();
+                  setImgToggle(null)
                 }}
               >
                 First floor
               </Button>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className="absolute top-0 left-1/4">
         <Reorder.Group
           axis="y"
@@ -183,16 +231,18 @@ const OfficeMap = () => {
           <div className="relative w-[284px] ">
             {/* {mapPositions.map((item, index) => (
               <> */}
-                <div className="absolute w-[284px] h-[224px] p-3">
+                {imgToggle !==null && <><div className="absolute w-[284px] h-[224px] p-3">
                   <Image src={`${mapPositions[imgToggle].img}`} width={1000} height={500} alt={mapPositions[imgToggle].alt} />
                 </div>
                 <div className="absolute p-5 top-44 right-6 w-[236px] h-[300px] bg-white ">
-                  <button className="absolute text-[#cfbf9c] top-1 right-2">
+                  <button className="absolute text-[#cfbf9c] top-1 right-2" onClick={()=> setImgToggle(null)}>
                     X
                   </button>
                   <h5 className=" text-[#cfbf9c] top-15">{mapPositions[imgToggle].alt}</h5>
                   <p>Lorem ipsum dolor sit amet</p>
                 </div>
+                </>
+      } 
               {/* </>
             ))} */}
           </div>

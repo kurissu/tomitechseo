@@ -1,19 +1,34 @@
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { motion, Variants } from "framer-motion";
 import { useState } from "react";
+import { motion, Variants } from "framer-motion";
 
 const cardVariants: Variants = {
   offscreen: {
-    y: 300,
-    scale: 0
+    y: "-100%",
+    opacity: 0
   },
   onscreen: {
-    scale: 1,
-    y: 50,
+    opacity: 1,
+    y: 0,
     transition: {
-      type: "spring",
-      bounce: 0.4,
+      // type: "spring",
+      // bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+const cardVariant2: Variants = {
+  offscreen: {
+    y: "-10%",
+    opacity: 0
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      // type: "spring",
+      // bounce: 0.4,
       duration: 0.8,
     },
   },
@@ -48,20 +63,31 @@ const GamePage = () => {
           viewport={{ once: false, amount: 0.8 }}
         >
          
+            <motion.div variants={cardVariants}>
             <p className="text-white">Game</p>
+
             <h1 className="text-4xl text-white">ENDLESS DUNGEON</h1>
+          </motion.div>
+          <motion.div variants={cardVariant2}>
+
             <video
               src="../videoBg.mp4"
               className="w-[700px] h-[500px]"
               controls
             ></video>
+                      </motion.div>
+                      <motion.div variants={cardVariants}>
+
             <p className=" text-lg text-white w-[700px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
               tempora beatae dicta deleniti illum voluptas eligendi, accusantium
               sunt vel. Harum voluptates dolor molestiae nisi deleniti tempore
               sunt doloremque vero sapiente?
             </p>
+            </motion.div>
+
             <motion.div variants={cardVariants}>
+
             <Button
               variant="ghost"
               className="text-white border-2 border-white"
