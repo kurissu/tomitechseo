@@ -4,11 +4,12 @@ import Image from 'next/image'
 
 const ServiceBanner = () => {
   return (
-<div className="grid grid-cols-4 text-center text-white w-[1200px] h-[600px] ">
+<div className="grid grid-cols-4 text-center text-white h-1/2">
       {/* <h1 className="text-3xl font-bold underline">service</h1> */}
-      <Link href="/service/mini-game" className="grid [grid-template-columns:1fr] overflow-hidden">
+      <Link href="/service/mini-game" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700">
           <Image
+          className='object-cover'
             src="/images/main_category_company.jpg"
             alt="mini game"
             width={500}
@@ -19,7 +20,7 @@ const ServiceBanner = () => {
           Mini game
         </div>
       </Link>
-      <Link href="/service/mobile-game" className="grid [grid-template-columns:1fr] overflow-hidden">
+      <Link href="/service/mobile-game" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700	">
           <Image
             src="/images/main_category_lab.jpg"
@@ -32,7 +33,7 @@ const ServiceBanner = () => {
           Mobile game
         </div>
       </Link>
-      <Link href="/service/art" className="grid [grid-template-columns:1fr] overflow-hidden">
+      <Link href="/service/art" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700	">
           <Image
             src="/images/main_category_culture.jpg"
@@ -45,7 +46,7 @@ const ServiceBanner = () => {
         Art
         </div>
       </Link>
-      <Link href="/service/brand-website" className="grid [grid-template-columns:1fr] overflow-hidden">
+      <Link href="/service/brand-website" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700	">
           <Image
             src="/images/main_category_in.jpg"

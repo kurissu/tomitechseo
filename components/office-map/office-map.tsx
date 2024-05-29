@@ -86,7 +86,7 @@ const OfficeMap = () => {
 
   return (
     <div className="relative w-screen h-screen">
-      <motion.div className="w-[730px] pt-[55px] ml-[230px]"           initial="offscreen"
+      <motion.div className="w-[330px] pt-[55px] ml-[230px] max-lg:w-[500px]"           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.8 }}>
         <motion.div variants={cardVariants}>
@@ -95,7 +95,7 @@ const OfficeMap = () => {
         </motion.div>
         <motion.div variants={cardVariant2}>
 
-        <ul className="map-container-list-container">
+        <ul className="map-container-list-container ">
           <li className="label-list">
             <label className=" " onClick={() => {setImgToggle(0), firstFloor()}}>
               Art
@@ -141,7 +141,7 @@ const OfficeMap = () => {
           </li>
         </ul>
         </motion.div>
-        <motion.div className="relative w-[700px] h-[130px]" variants={cardVariant2}>
+        <motion.div className="relative w-[300px] max-lg:w-[500px] h-[130px]" variants={cardVariant2}>
           <div className="absolute bottom-0 left-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -208,18 +208,18 @@ const OfficeMap = () => {
       <div className="absolute top-0 left-1/4">
         <Reorder.Group
           axis="y"
-          className="relative w-[1061px]"
+          className="relative w-[1061px] max-lg:w-[500px]"
           onReorder={setItems}
           values={items}
         >
           {items.map((item: any, index) => (
             <Item key={item} item={item}>
-              <div className=" w-full">
+              <div>
                 <Image
                   src={item}
                   key={item}
                   alt="demo"
-                  className="w-full h-full"
+                  className="w-full h-full max-lg:w-1/2 max-lg:h-1/2"
                   width={5000}
                   height={500}
                 />
