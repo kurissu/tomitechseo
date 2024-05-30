@@ -55,7 +55,7 @@ const GamePage = () => {
 
   return (
     <div className="relative">
-      <div className="absolute h-full left-40 z-10 bg-gray-800 bg-opacity-5 px-4">
+      <div className="absolute text-center md:text-left h-full md:left-40 z-10 md:bg-gray-800 md:bg-opacity-5 px-4">
         <motion.div
           className=" mt-32"
           initial="offscreen"
@@ -72,7 +72,7 @@ const GamePage = () => {
 
             <video
               src="../videoBg.mp4"
-              className="w-[700px] h-[500px]"
+              className="w-[410px] h-[230px] mx-auto md:w-[700px] md:h-[500px] object-contain"
               controls
             ></video>
                       </motion.div>

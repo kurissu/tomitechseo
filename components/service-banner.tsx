@@ -4,15 +4,15 @@ import Image from 'next/image'
 
 const ServiceBanner = () => {
   return (
-<div className="grid grid-cols-4 text-center text-white h-1/2">
+<div className="grid grid-cols-4 text-center text-white h-full">
       {/* <h1 className="text-3xl font-bold underline">service</h1> */}
-      <Link href="/service/mini-game" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
+      <Link href="/service/mini-game" className="grid col-span-4 [grid-template-columns:1fr]  md:col-span-2  lg:col-span-1 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700">
           <Image
-          className='object-cover'
+          className='object-contain'
             src="/images/main_category_company.jpg"
             alt="mini game"
-            width={500}
+            width={2000}
             height={1000}
           />
         </span>
@@ -20,12 +20,12 @@ const ServiceBanner = () => {
           Mini game
         </div>
       </Link>
-      <Link href="/service/mobile-game" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
+      <Link href="/service/mobile-game" className="grid col-span-4 [grid-template-columns:1fr] md:col-span-2  lg:col-span-1 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700	">
           <Image
             src="/images/main_category_lab.jpg"
             alt="mini game"
-            width={500}
+            width={2000}
             height={1000}
           />
         </span>
@@ -33,12 +33,12 @@ const ServiceBanner = () => {
           Mobile game
         </div>
       </Link>
-      <Link href="/service/art" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
+      <Link href="/service/art" className="grid col-span-4 [grid-template-columns:1fr] md:col-span-2 lg:col-span-1 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700	">
           <Image
             src="/images/main_category_culture.jpg"
             alt="mini game"
-            width={500}
+            width={2000}
             height={1000}
           />
         </span>
@@ -46,12 +46,12 @@ const ServiceBanner = () => {
         Art
         </div>
       </Link>
-      <Link href="/service/brand-website" className="grid [grid-template-columns:1fr] max-lg:col-span-2 overflow-hidden">
+      <Link href="/service/brand-website" className="grid col-span-4 [grid-template-columns:1fr] md:col-span-2  lg:col-span-1 overflow-hidden">
         <span className="flex justify-center md:block [grid-column:1] [grid-row:1] hover:scale-125 hover:z-0 object-fill duration-700	">
           <Image
             src="/images/main_category_in.jpg"
             alt="mini game"
-            width={500}
+            width={2000}
             height={1000}
           />
         </span>

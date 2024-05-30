@@ -6,7 +6,7 @@ type Props = {};
 
 const Nav = (props: Props) => {
   return (
-      <div className="absolute align-middle z-10 text-white lg:hover:bg-white lg:hover:text-black duration-700 w-full">
+      <div className="absolute align-middle z-10 text-white lg:hover:bg-white lg:hover:text-black duration-700 w-full px-5">
         <nav className="flex lg:justify-around justify-between space-x-12">
             <Image className="lg:hidden" src="/images/hamburger.svg" alt="logo" width={32} height={32}/>
           <h1 className="text-3xl font-bold align-bottom">TomiTech24</h1>

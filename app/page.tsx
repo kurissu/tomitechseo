@@ -1,5 +1,6 @@
 "use client";
 import GameAnimation from "@/app/game-animation/page";
+import GameAnimationMobile from "@/app/game-animation-mobile/page";
 import GamePage from "@/components/game-page";
 import LogoCarousel from "@/components/logo-carousel";
 import OfficeMap from "@/components/office-map/office-map";
@@ -18,7 +19,7 @@ import Nav from "@/components/nav";
 
 export default function Home() {
   return (
-    <main className="snap-y snap-mandatory h-screen w-screen overflow-x-hidden">
+    <main className="snap-y snap-mandatory h-screen w-screen overflow-x-hidden no-scrollbar">
       {/* Landing page */}
       <section className="relative snap-always snap-start flex w-screen h-screen flex-col items-center ">
       <Nav />
@@ -39,15 +40,16 @@ export default function Home() {
       </section>
       {/* Game Pages */}
       <section className="snap-start w-screen h-screen">
-        {/* <GamePage /> */}
+        <GamePage />
       </section>
       {/* Office Map */}
       <section className="snap-start w-screen h-screen">
-        {/* <OfficeMap /> */}
+        <OfficeMap />
       </section>
       {/* Game Animation Page */}
       <section className="snap-start w-screen h-screen">
         {/* <GameAnimation /> */}
+        <GameAnimationMobile />
       </section>
       <section className="snap-center w-screen h-screen">
         <ServiceBanner />
