@@ -47,9 +47,15 @@ export default function Home() {
         <OfficeMap />
       </section>
       {/* Game Animation Page */}
-      <section className="snap-start w-screen h-screen">
-        {/* <GameAnimation /> */}
+      <section className="snap-start w-screen h-full">
+        <div className="max-lg:hidden">
+
+        <GameAnimation />
+        </div>
+        <div className="lg:hidden">
+
         <GameAnimationMobile />
+        </div>
       </section>
       <section className="snap-center w-screen h-screen">
         <ServiceBanner />

@@ -57,7 +57,7 @@ const GamePage = () => {
     <div className="relative">
       <div className="absolute text-center md:text-left h-full md:left-40 z-10 md:bg-gray-800 md:bg-opacity-5 px-4">
         <motion.div
-          className=" mt-32"
+          className=" mt-32 md:w-[700px]"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.8 }}
@@ -78,7 +78,7 @@ const GamePage = () => {
                       </motion.div>
                       <motion.div variants={cardVariants}>
 
-            <p className=" text-lg text-white w-[700px]">
+            <p className=" text-lg text-white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
               tempora beatae dicta deleniti illum voluptas eligendi, accusantium
               sunt vel. Harum voluptates dolor molestiae nisi deleniti tempore

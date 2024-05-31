@@ -71,7 +71,9 @@ export default function App() {
   };
 
   return (
-    <main className="w-full h-screen relative bg-black text-white">
+    <main className="w-full h-svh relative bg-black text-white">
+      {/* intro section */}
+
       <div
         className={
           hideButton2
@@ -116,6 +118,7 @@ export default function App() {
           </div>
         </div>
       </div>
+
       <nav className="border-b-2 border-gray-500 p-3">
         <h2 className="text-3xl ">
           Tomitech<span className="font-bold">24</span>
@@ -245,91 +248,109 @@ export default function App() {
           </Button>
         </div>
       </nav>
-
-      <div className="relative my-20 mx-10 h-[765px]">
-        <h1 className="text-5xl">
-          Embark on a new adventure today with Tomitech.
-        </h1>
-        <div className="absolute bottom-0 w-full">
-          <div className="flex justify-center items-center">
-            <Link className="absolute text-sm" href={""}>
-              VIEW OUR GAMES
-            </Link>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 120 138"
-              width="120"
-              height="138"
-              preserveAspectRatio="xMidYMid meet"
-              // style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"
-            >
-              <defs>
-                <clipPath id="__lottie_element_29">
-                  <rect width="120" height="138" x="0" y="0"></rect>
-                </clipPath>
-              </defs>
-              <g clip-path="url(#__lottie_element_29)">
-                <g
-                  transform="matrix(1,0,0,1,3.5,0)"
-                  opacity="1"
-                  // style="display: block;"
-                >
+      <section className="h-svh">
+        <div className="grid my-20 mx-10 border-2 border-red-500 h-full">
+          <h1 className="text-5xl h-36">
+            Embark on a new adventure today with Tomitech.
+          </h1>
+          <div className="self-end w-full">
+            <div className="flex justify-center items-center">
+              <Link className="absolute text-sm" href={""}>
+                VIEW OUR GAMES
+              </Link>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 120 138"
+                width="120"
+                height="138"
+                preserveAspectRatio="xMidYMid meet"
+                // style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"
+              >
+                <defs>
+                  <clipPath id="__lottie_element_29">
+                    <rect width="120" height="138" x="0" y="0"></rect>
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#__lottie_element_29)">
                   <g
+                    transform="matrix(1,0,0,1,3.5,0)"
                     opacity="1"
-                    transform="matrix(1,0,0,1,56.172000885009766,24.25)"
+                    // style="display: block;"
                   >
-                    <path
-                      fill="rgb(255,255,255)"
-                      fill-opacity="1"
-                      d=" M-0.5,24 C-0.5,24 0.5,24 0.5,24 C0.5,24 0.5,-24 0.5,-24 C0.5,-24 -0.5,-24 -0.5,-24 C-0.5,-24 -0.5,24 -0.5,24z"
-                    ></path>
-                  </g>
-                  <g
-                    opacity="1"
-                    transform="matrix(0.9766867160797119,-0.21466965973377228,0.21466965973377228,0.9766867160797119,56.172000885009766,48.75)"
-                  >
-                    <path
-                      fill="rgb(255,255,255)"
-                      fill-opacity="1"
-                      d=" M-16,0.5 C-16,0.5 16,0.5 16,0.5 C16,0.5 16,-0.5 16,-0.5 C16,-0.5 -16,-0.5 -16,-0.5 C-16,-0.5 -16,0.5 -16,0.5z"
-                    ></path>
-                  </g>
-                  <g
-                    opacity="1"
-                    transform="matrix(0.9766867160797119,-0.21466965973377228,0.21466965973377228,0.9766867160797119,56.172000885009766,87.75)"
-                  >
-                    <path
-                      fill="rgb(255,255,255)"
-                      fill-opacity="1"
-                      d=" M-16,0.5 C-16,0.5 16,0.5 16,0.5 C16,0.5 16,-0.5 16,-0.5 C16,-0.5 -16,-0.5 -16,-0.5 C-16,-0.5 -16,0.5 -16,0.5z"
-                    ></path>
-                  </g>
-                  <g
-                    opacity="1"
-                    transform="matrix(1,0,0,1,56.172000885009766,112.2509994506836)"
-                  >
-                    <path
-                      fill="rgb(255,255,255)"
-                      fill-opacity="1"
-                      d=" M-0.5,24.000999450683594 C-0.5,24.000999450683594 0.5,24.000999450683594 0.5,24.000999450683594 C0.5,24.000999450683594 0.5,-24.000999450683594 0.5,-24.000999450683594 C0.5,-24.000999450683594 -0.5,-24.000999450683594 -0.5,-24.000999450683594 C-0.5,-24.000999450683594 -0.5,24.000999450683594 -0.5,24.000999450683594z"
-                    ></path>
-                  </g>
-                  <g
-                    opacity="1"
-                    transform="matrix(1,0,0,1,56.17100143432617,131.73899841308594)"
-                  >
-                    <path
-                      fill="rgb(255,255,255)"
-                      fill-opacity="1"
-                      d=" M0.08500000089406967,5.2179999351501465 C0.08500000089406967,5.2179999351501465 -9.644000053405762,-4.511000156402588 -9.644000053405762,-4.511000156402588 C-9.644000053405762,-4.511000156402588 -8.935999870300293,-5.2179999351501465 -8.935999870300293,-5.2179999351501465 C-8.935999870300293,-5.2179999351501465 0.08500000089406967,3.803999900817871 0.08500000089406967,3.803999900817871 C0.08500000089406967,3.803999900817871 8.937000274658203,-5.047999858856201 8.937000274658203,-5.047999858856201 C8.937000274658203,-5.047999858856201 9.644000053405762,-4.341000080108643 9.644000053405762,-4.341000080108643 C9.644000053405762,-4.341000080108643 0.08500000089406967,5.2179999351501465 0.08500000089406967,5.2179999351501465z"
-                    ></path>
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,56.172000885009766,24.25)"
+                    >
+                      <path
+                        fill="rgb(255,255,255)"
+                        fill-opacity="1"
+                        d=" M-0.5,24 C-0.5,24 0.5,24 0.5,24 C0.5,24 0.5,-24 0.5,-24 C0.5,-24 -0.5,-24 -0.5,-24 C-0.5,-24 -0.5,24 -0.5,24z"
+                      ></path>
+                    </g>
+                    <g
+                      opacity="1"
+                      transform="matrix(0.9766867160797119,-0.21466965973377228,0.21466965973377228,0.9766867160797119,56.172000885009766,48.75)"
+                    >
+                      <path
+                        fill="rgb(255,255,255)"
+                        fill-opacity="1"
+                        d=" M-16,0.5 C-16,0.5 16,0.5 16,0.5 C16,0.5 16,-0.5 16,-0.5 C16,-0.5 -16,-0.5 -16,-0.5 C-16,-0.5 -16,0.5 -16,0.5z"
+                      ></path>
+                    </g>
+                    <g
+                      opacity="1"
+                      transform="matrix(0.9766867160797119,-0.21466965973377228,0.21466965973377228,0.9766867160797119,56.172000885009766,87.75)"
+                    >
+                      <path
+                        fill="rgb(255,255,255)"
+                        fill-opacity="1"
+                        d=" M-16,0.5 C-16,0.5 16,0.5 16,0.5 C16,0.5 16,-0.5 16,-0.5 C16,-0.5 -16,-0.5 -16,-0.5 C-16,-0.5 -16,0.5 -16,0.5z"
+                      ></path>
+                    </g>
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,56.172000885009766,112.2509994506836)"
+                    >
+                      <path
+                        fill="rgb(255,255,255)"
+                        fill-opacity="1"
+                        d=" M-0.5,24.000999450683594 C-0.5,24.000999450683594 0.5,24.000999450683594 0.5,24.000999450683594 C0.5,24.000999450683594 0.5,-24.000999450683594 0.5,-24.000999450683594 C0.5,-24.000999450683594 -0.5,-24.000999450683594 -0.5,-24.000999450683594 C-0.5,-24.000999450683594 -0.5,24.000999450683594 -0.5,24.000999450683594z"
+                      ></path>
+                    </g>
+                    <g
+                      opacity="1"
+                      transform="matrix(1,0,0,1,56.17100143432617,131.73899841308594)"
+                    >
+                      <path
+                        fill="rgb(255,255,255)"
+                        fill-opacity="1"
+                        d=" M0.08500000089406967,5.2179999351501465 C0.08500000089406967,5.2179999351501465 -9.644000053405762,-4.511000156402588 -9.644000053405762,-4.511000156402588 C-9.644000053405762,-4.511000156402588 -8.935999870300293,-5.2179999351501465 -8.935999870300293,-5.2179999351501465 C-8.935999870300293,-5.2179999351501465 0.08500000089406967,3.803999900817871 0.08500000089406967,3.803999900817871 C0.08500000089406967,3.803999900817871 8.937000274658203,-5.047999858856201 8.937000274658203,-5.047999858856201 C8.937000274658203,-5.047999858856201 9.644000053405762,-4.341000080108643 9.644000053405762,-4.341000080108643 C9.644000053405762,-4.341000080108643 0.08500000089406967,5.2179999351501465 0.08500000089406967,5.2179999351501465z"
+                      ></path>
+                    </g>
                   </g>
                 </g>
-              </g>
-            </svg>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      {/* eversoul */}
+      {/* <section className="bg-black h-screen">
+        <div>
+          <div>
+            <h1>Eversoul</h1>
+            <p>
+              <span>MOBILE</span>
+              <span>RPG</span>
+            </p>
+          </div>
+          <div>
+            <Link href={""}>Home</Link>
+            <Link href={""}>Play store</Link>
+            <Link href={""}>App Store</Link>
+          </div>
+        </div>
+      </section> */}
 
       {/* <main className="w-full h-screen relative bg-black">
         <div
