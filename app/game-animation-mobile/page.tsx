@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useState } from "react";
 import { initialTabs as tabs } from "./ingredients";
@@ -7,8 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import "./styles.css";
 import { Button } from "@/components/ui/button";
-import ParallaxText from "@/components/parallax-text/parallax-text";
 import Link from "next/link";
+import { useRef } from "react";
+
+
+
 
 export default function App() {
   const [showFollow, setShowFollow] = useState(false);
@@ -71,9 +73,9 @@ export default function App() {
   };
 
   return (
-    <main className="w-full h-svh relative bg-black text-white">
-      {/* intro section */}
-
+    <div className="relative h-screen bg-black text-white">
+      <section className="h-[calc(100vh-80px)]">
+      
       <div
         className={
           hideButton2
@@ -118,7 +120,6 @@ export default function App() {
           </div>
         </div>
       </div>
-
       <nav className="border-b-2 border-gray-500 p-3">
         <h2 className="text-3xl ">
           Tomitech<span className="font-bold">24</span>
@@ -248,13 +249,16 @@ export default function App() {
           </Button>
         </div>
       </nav>
-      <section className="h-svh">
-        <div className="grid my-20 mx-10 border-2 border-red-500 h-full">
-          <h1 className="text-5xl h-36">
+
+      
+        <div className="grid mx-10 border-2 border-red-500 h-full">
+          <h1 className="text-5xl h-[20px]">
             Embark on a new adventure today with Tomitech.
           </h1>
-          <div className="self-end w-full">
-            <div className="flex justify-center items-center">
+          <div className="h-full">
+            <div className="flex justify-center items-end h-full">
+              <div className="flex justify-center items-center">
+
               <Link className="absolute text-sm" href={""}>
                 VIEW OUR GAMES
               </Link>
@@ -330,10 +334,14 @@ export default function App() {
                   </g>
                 </g>
               </svg>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      {/* <section className="w-full h-screen bg-pink-500">
+
+      </section> */}
       {/* eversoul */}
       {/* <section className="bg-black h-screen">
         <div>
@@ -640,6 +648,6 @@ export default function App() {
           </ParallaxText>
         </div>
       </main> */}
-    </main>
+    </div>
   );
 }

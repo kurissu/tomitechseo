@@ -105,7 +105,7 @@ const GamePage = () => {
       </div>
       <video
         src="../video1.mp4"
-        className="w-full h-[100vh] object-cover z-0"
+        className="w-screen h-[100vh] object-cover z-0"
         autoPlay
         muted
         loop

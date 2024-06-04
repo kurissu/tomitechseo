@@ -15,6 +15,7 @@ import AnimationThree from "@/components/animation-three/animation-three";
 import AnimationFive from "@/components/animation-five/animation-five";
 import ParallaxText from "@/components/parallax-text/parallax-text";
 import Nav from "@/components/nav";
+import ScrollSample from "@/components/scroll-sample/test";
 // import videoBg from '@/assets/video-bg.mp4'
 
 export default function Home() {
@@ -47,18 +48,15 @@ export default function Home() {
         <OfficeMap />
       </section>
       {/* Game Animation Page */}
-      <section className="snap-start w-screen h-full">
-        <div className="max-lg:hidden">
-
+      <section className="max-lg:hidden snap-start w-screen h-dvh">
         <GameAnimation />
-        </div>
-        <div className="lg:hidden">
-
-        <GameAnimationMobile />
-        </div>
+      </section>
+      <section className="lg:hidden snap-start w-screen">
+        {/* <GameAnimationMobile /> */}
       </section>
       <section className="snap-center w-screen h-screen">
-        <ServiceBanner />
+        {/* <ServiceBanner /> */}
+        <ScrollSample/>
       </section>
       <section className="snap-center w-screen h-screen">
         {/* <OurFranchises /> */}
