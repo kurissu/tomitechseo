@@ -74,18 +74,20 @@ const OfficeMap = () => {
 
   return (
     <div className="relative w-screen h-screen">
-      <div className="grid grid-rows-3 grid-flow-col gap-4">
-        <div className="row-span-3 ">
+      <div className="grid grid-rows-3 grid-flow-col gap-4 lg:pl-40 md:pl-40">
+        <motion.div className="max-sm:row-span-1 col-span-2 md:col-span-3 lg:text-left md:text-left text-center">
+          <motion.div variants={cardVariants}>
+            <p className="text-lg">Studio</p>
+            <h1 className="text-6xl">MAP</h1>
+          </motion.div>
+        </motion.div>
+        <div className="row-span-2 lg:row-span-2">
           <motion.div
             className="w-[150px] lg:pt-[55px] lg-[230px]"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: false, amount: 0.8 }}
           >
-            <motion.div variants={cardVariants}>
-              <p className="text-lg">Studio</p>
-              <h1 className="text-6xl">MAP</h1>
-            </motion.div>
             <motion.div variants={cardVariant2}>
               <ul className="map-container-list-container ">
                 <li className="label-list">
@@ -173,7 +175,7 @@ const OfficeMap = () => {
             </motion.div>
           </motion.div>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 lg:row-span-1">
           <motion.div
             className="relative w-[300px] max-lg:w-[500px] h-[130px]"
             variants={cardVariant2}
@@ -241,7 +243,7 @@ const OfficeMap = () => {
             </div>
           </motion.div>
         </div>
-        <div className="row-span-2 col-span-2...">
+        <div className="row-span-1 col-span-2 lg:col-span-9">
           <div className="relative">
             <div className="absolute top-0 ">
               <Reorder.Group

@@ -8,6 +8,7 @@ import GameAnimation from "../game-animation";
 import GameAnimationMobile from "@/app/game-animation-mobile/page";
 
 import GamePage from "../game-page";
+import MobileAnimation from "./mobile-animation";
 
 const LINE_VARIANTS = {
   visible: { height: "75vh", transition: { duration: 2 } },
@@ -19,6 +20,24 @@ const SnapParent = React.forwardRef(({ ...props }, ref) => (
     {props.children}
   </div>
 ));
+
+export const allBgImage = [
+  { src: "/images/EVS_bg.png", alt: "eversoul" },
+  { src: "/images/AA_bg.png", alt: "archage" },
+  { src: "/images/ER_bg_v1.png", alt: "eternal return" },
+  { src: "/images/WF_bg.png", alt: "world flipper" },
+];
+
+
+export const allCharImage = [
+  { src: "/images/EVS_chr.png", alt: "eversoul" },
+  { src: "/images/AA_chr.png", alt: "archage" },
+  { src: "/images/ER_chr_v1.png", alt: "eternal return" },
+  { src: "/images/WF_chr.png", alt: "world flipper" },
+
+];
+
+
 
 const Container = ({ children }) => {
   const windowSize = useWindowSize();
@@ -106,10 +125,14 @@ export default function ScrollSample() {
       <Box full>
         <GameAnimationMobile/>
       </Box>
-      <Box full triggerOnce transLeft color="#C5E99B">
-        Box 2 (half)
-      </Box>
-      <Box full color="#84B1ED">
+      {
+        allCharImage.map((item,index)=>(
+        <Box full>
+          <MobileAnimation src={item.src} alt={item.alt} index={index}/>
+        </Box>
+        ))
+      }
+      {/* <Box full color="#84B1ED">
         Box 3 (full)
       </Box>
       <Box half triggerOnce transLeft color="#67D5B5">
@@ -121,7 +144,7 @@ export default function ScrollSample() {
       <ContentBox color="white">Box 6 (full)</ContentBox>
       <Box full color="#84B1ED">
         Box 6 (full)
-      </Box>
+      </Box> */}
     </Container>
   );
 }

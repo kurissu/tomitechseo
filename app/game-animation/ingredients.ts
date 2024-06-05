@@ -9,10 +9,6 @@ export const allIngredients = [
   { src: "/images/ER_chr_v1.png", alt: "eternal return" },
   { src: "/images/WF_chr.png", alt: "world flipper" },
 
-//   { src: "🍅", alt: "eversoul" },
-//   { src: "🥬", alt: "archage" },
-//   { src: "🧀", alt: "eternal return" },
-//   { src: "🥕", alt: "world flipper" },
 ];
 
 const [eversoul, archage, eternal_return, world_flipper] = allIngredients;

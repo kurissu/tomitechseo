@@ -53,13 +53,14 @@ export default function Home() {
       </section>
       <section className="lg:hidden snap-start w-screen">
         {/* <GameAnimationMobile /> */}
-      </section>
-      <section className="snap-center w-screen h-screen">
-        {/* <ServiceBanner /> */}
         <ScrollSample/>
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <OurFranchises /> */}
+        {/* <ServiceBanner /> */}
+
+      </section>
+      <section className="snap-center w-screen h-screen">
+        <OurFranchises />
       </section>
       <section className="snap-center w-screen h-screen">
         {/* <AnimationOne /> */}

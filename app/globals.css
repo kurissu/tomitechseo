@@ -89,5 +89,19 @@
     }
   }
 
+  @keyframes clipPathAnimation {
+    0% {
+      clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 50%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0%, 100% 20%, 0 80%);
+    }
+
+  }
+  
+  /* Apply the animation to the element */
+  .element {
+    animation: clipPathAnimation 4s normal forwards ;
+  }
 
 
