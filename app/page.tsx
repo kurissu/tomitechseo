@@ -51,7 +51,7 @@ export default function Home() {
       <section className="max-lg:hidden snap-start w-screen h-dvh">
         <GameAnimation />
       </section>
-      <section className="lg:hidden snap-start w-screen">
+      <section className="relative lg:hidden snap-start w-screen">
         {/* <GameAnimationMobile /> */}
         <ScrollSample/>
       </section>
