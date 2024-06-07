@@ -106,14 +106,14 @@ const Container = ({ children }) => {
     >
       <div
         style={{
-          position: "fixed",
+          position: "absolute",
           top: 0,
           fontFamily: "monospace",
           fontWeight: 600,
           zIndex: 50
         }}
       >
-        {"height: " +
+        {/* {"height: " +
           calcHeight.get() +
           " | y: " +
           scrollYValue +
@@ -124,7 +124,7 @@ const Container = ({ children }) => {
           " w: " +
           windowSize.width +
           "   "}
-        <button onClick={refreshPage}>refresh</button>
+        <button onClick={refreshPage}>refresh</button> */}
         <div
         className={
           hideButton2
@@ -169,11 +169,16 @@ const Container = ({ children }) => {
           </div>
         </div>
       </div>
-      <nav className="fixed h-[60px] w-full border-b-2 border-gray-500 p-3">
+      <div className="relative border-2 border-green">
+
+        <div className="absolute h-full w-full fill-red text-white">
+
+        </div>
+      <nav className="flex justify-between h-[60px] w-screen text-white p-3 border-b-2 border-[#3C3B3A]" style={{borderBottom: "1px solid #3C3B3A"}}>
         <h2 className="text-3xl ">
           Tomitech<span className="font-bold">24</span>
         </h2>
-        <div className={hideButton ? "absolute right-3 top-3 z-40" : "hidden"}>
+        <div className={hideButton ? " z-30" : "hidden"}>
           <Button
             onClick={() => setHideButton2(true)}
             className={hideButton2 ? "hidden" : ""}
@@ -298,6 +303,7 @@ const Container = ({ children }) => {
           </Button>
         </div>
       </nav>
+      </div>
       </div>
       <div
         style={{

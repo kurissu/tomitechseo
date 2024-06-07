@@ -74,14 +74,14 @@ const OfficeMap = () => {
 
   return (
     <div className="relative w-screen h-screen">
-      <div className="grid grid-rows-3 grid-flow-col gap-4 lg:pl-40 md:pl-40">
+      <div className="grid grid-rows-4 grid-flow-col gap-4 lg:pl-40 md:pl-40">
         <motion.div className="max-sm:row-span-1 col-span-2 md:col-span-3 lg:text-left md:text-left text-center">
           <motion.div variants={cardVariants}>
             <p className="text-lg">Studio</p>
             <h1 className="text-6xl">MAP</h1>
           </motion.div>
         </motion.div>
-        <div className="row-span-2 lg:row-span-2">
+        <div className="row-span-3 lg:row-span-2">
           <motion.div
             className="w-[150px] lg:pt-[55px] lg-[230px]"
             initial="offscreen"

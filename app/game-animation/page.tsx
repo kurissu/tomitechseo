@@ -83,8 +83,7 @@ export default function App() {
           }`}
           src={"/images/TOMITECH24.svg"}
           alt={"background"}
-          width={1200}
-          height={700}
+          fill
         />
 
         {tabs.map((item, index) => (
@@ -93,7 +92,7 @@ export default function App() {
             key={item?.alt}
           >
             <Image
-              className={`z-40 character w-[90%] h-[90%] ${
+              className={`z-40 character w-[90%] h-[90%] object-cover ${
                 item.alt === selectedTab?.alt
                   ? "show"
                   : item.alt === hoverTab?.alt

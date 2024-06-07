@@ -73,13 +73,13 @@ export default function App() {
   };
 
   return (
-    <div className="relative h-screen bg-black text-white">
+    <div className="relative h-screen bg-[#171614] text-white">
       <section className="h-[calc(100vh-80px)]">
       
       
 
       
-        <div className="grid pt-20 mx-10 border-2 border-red-500 h-full">
+        <div className="grid pt-40 mx-10  h-full">
           <h1 className="text-5xl h-[20px]">
             Embark on a new adventure today with Tomitech.
           </h1>

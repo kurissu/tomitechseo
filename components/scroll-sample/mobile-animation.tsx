@@ -26,6 +26,20 @@ const cardVariants: Variants = {
     },
   },
 };
+const cardVariant2: Variants = {
+  offscreen: {
+    transform: "polygon(0 0, 100% 0%, 100% 50%, 0 50%);"
+  },
+  onscreen: {
+    transform: "polygon(0 0, 100% 0%, 100% 30%, 0 70%);",
+    transition: {
+      // type: "spring",
+      // bounce: 0.4,
+      delay: 1.2,
+      duration: 2,
+    },
+  },
+};
 export const allBgImage = [
   { src: "/images/EVS_bg.png", alt: "eversoul" },
   { src: "/images/AA_bg.png", alt: "archage" },
@@ -41,35 +55,35 @@ const MobileAnimation = (props: Props) => {
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: false, amount: 0.8 }} 
-    className="w-screen h-screen bg-[#171614] text-white border-2 border-red-600">
+    className="w-screen h-screen bg-[#171614] text-white ">
       {/* <section className="h-[calc(100vh-500px)] border-2 border-yellow-400"> */}
-      <div className={`relative h-[69px] w-full border-r-2 border-blue-600`}>
-        <div style={{ width: `${(index + 1)/4 * 100}%` }} className={`absolute bg-[#0e0e0e] border-2 border-green-600 h-full`}></div>
-      </div>
-      <div className="h-full border-2 border-yellow-500">
-        <div className="grid row-span-1 justify-center border-2 border-pink-500 h-1/2">
-          <div className="grid text-center gap-4 h-10">
+      {/* <div className={`relative h-[69px] w-full `}>
+        <div style={{ width: `${(index + 1)/4 * 100}%`, borderRight: "1px solid #3C3B3A" }} className={`absolute bg-[#0e0e0e] h-full`}></div>
+      </div> */}
+      <div className="h-full">
+        <div className="grid row-span-1 justify-center h-1/2">
+          <div className="grid self-center text-center gap-4 h-36 ">
             <h1>{alt}</h1>
             <p className="flex gap-1 justify-center">
               <span>Mobile</span>
               <span>rpg</span>
             </p>
-          </div>
           <div className="flex justify-center h-10">
             <Button>home</Button>
             <Button>Play</Button>
             <Button>Apple</Button>
           </div>
+          </div>
         </div>
         <div className="h-full">
-          <div className="relative w-full border-2 border-green-600 h-1/2">
+          <div className="relative w-full h-1/2">
             <div className="absolute w-full h-96 bg-[#171614] z-10 element">
 
             </div>
             {/* <AnimatedElement/> */}
             <motion.div
               variants={cardVariants}
-              className="absolute z-20 w-full h-full border-2 border-cyan-600"
+              className="absolute z-20 w-full h-full"
             >
               <Image
                 className="w-full h-full object-cover"
@@ -79,7 +93,7 @@ const MobileAnimation = (props: Props) => {
               />
             </motion.div>
             <Image
-              className="w-full z-0 h-full"
+              className="w-full z-0 h-full object-cover"
               src={allBgImage[index]?.src}
               fill
               alt={allBgImage[index]?.alt}
