@@ -41,26 +41,18 @@ export default function Home() {
       </section>
       {/* Game Pages */}
       <section className="snap-start w-screen h-screen">
-        <GamePage />
+        {/* <GamePage /> */}
+
       </section>
       {/* Office Map */}
       <section className="snap-start w-screen h-screen">
-        <OfficeMap />
-      </section>
-      {/* Game Animation Page */}
-      <section className="max-lg:hidden snap-start w-screen h-dvh">
-        <GameAnimation />
-      </section>
-      <section className="relative lg:hidden snap-start w-screen">
-        {/* <GameAnimationMobile /> */}
-        <ScrollSample/>
+        {/* <OfficeMap /> */}
       </section>
       <section className="snap-center w-screen h-screen">
-        {/* <ServiceBanner /> */}
-
+        <ServiceBanner />
       </section>
       <section className="snap-center w-screen h-screen">
-        <OurFranchises />
+        {/* <OurFranchises /> */}
       </section>
       <section className="snap-center w-screen h-screen">
         {/* <AnimationOne /> */}
@@ -75,6 +67,14 @@ export default function Home() {
         {/* <AnimationFour /> */}
       </section>
       <section className="snap-center w-screen h-screen"></section>
+      {/* Game Animation Page */}
+      <section className="max-lg:hidden snap-start w-screen h-dvh">
+        <GameAnimation />
+      </section>
+      <section className="relative lg:hidden snap-start w-screen">
+        {/* <GameAnimationMobile /> */}
+        <ScrollSample/>
+      </section>
     </main>
   );
 }

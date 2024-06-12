@@ -21,6 +21,10 @@ const config = {
       backgroundImage:{
         'default': "url('/images/TOMITECH24.svg')",
         'evs': "url('/images/EVS_bg.png')",
+        'company': "url('/images/main_category_company.jpg')",
+        'culture': "url('/images/main_category_culture.jpg')",
+        'in': "url('/images/main_category_in.jpg')",
+        'lab': "url('/images/main_category_lab.jpg')",
       },
       colors: {
         border: "hsl(var(--border))",
