@@ -124,3 +124,8 @@
   .card-zoom:hover .card-zoom-desc {
     @apply block ease-in-out duration-700;
   }
+
+  /* show hide tab */
+  .group.is-published .group-\[\.is-published\]\:block {
+    display: block;
+  }
