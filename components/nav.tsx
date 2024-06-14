@@ -18,10 +18,10 @@ const Nav = (props: Props) => {
           title
         </div>
         <div className="h-full grid py-7 border-2 border-red-500 mt-16">
-          <ul className="w-full h-full">
-            <li className="h-auto">
+          <ul className="w-full">
+            <li>
               <div className="flex justify-left items-center w-full h-14 mt-1 mb-1 px-4 border-b-2"  onClick={() => setShow(!show)}>Introduction</div>
-              <div className={`pt-2 ${show ? 'visible' : 'invisible' }`}>
+              <div className={`pt-2 ${show ? 'visible' : 'invisible h-0' }`}>
                 <ul>
                   <li className="p-4">About Us</li>
                   <li className="p-4">Global Lab</li>
