@@ -46,14 +46,14 @@ const Nav = (props: Props) => {
         <div className="absolute top-5" onClick={() => setShow(!show)}>
           X
         </div>
-        <div className="absolute left-[50%] -translate-x-1/2 -translate-y-1/2 top-8">
+        <div className="absolute left-[50%] font-semibold -translate-x-1/2 -translate-y-1/2 top-8">
           PEARL ABYSS
         </div>
-        <div className="h-full grid py-7 border-2 border-red-500 mt-16">
+        <div className="h-full grid py-7 mt-16">
           <ul className="w-full">
             <li>
               <div
-                className={`flex justify-left items-center w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 1 ? "border-black" : ""}`}
+                className={`flex justify-left items-center font-semibold w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 1 ? "border-black" : ""}`}
                 onClick={() => handleClick(1)}
               >
                 Introduction
@@ -64,15 +64,15 @@ const Nav = (props: Props) => {
                 }`}
               >
                 <ul>
-                  <li className="p-4">About Us</li>
-                  <li className="p-4">Global Lab</li>
-                  <li className="p-4">CCP</li>
+                  <li className="p-4 text-gray-500">About Us</li>
+                  <li className="p-4 text-gray-500">Global Lab</li>
+                  <li className="p-4 text-gray-500">CCP</li>
                 </ul>
               </div>
             </li>
             <li>
               <div
-                className={`flex justify-left items-center w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 2 ? "border-black" : ""}`}
+                className={`flex justify-left items-center font-semibold w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 2 ? "border-black" : ""}`}
                 onClick={() => handleClick(2)}
               >
                 Games
@@ -83,17 +83,17 @@ const Nav = (props: Props) => {
                 }`}
               >
                 <ul>
-                  <li className="p-4">Black Desert</li>
-                  <li className="p-4">Black Desert Mobile</li>
-                  <li className="p-4">Crimson Desert</li>
-                  <li className="p-4">DokeV</li>
-                  <li className="p-4">PLAN 8</li>
+                  <li className="p-4 text-gray-500">Black Desert</li>
+                  <li className="p-4 text-gray-500">Black Desert Mobile</li>
+                  <li className="p-4 text-gray-500">Crimson Desert</li>
+                  <li className="p-4 text-gray-500">DokeV</li>
+                  <li className="p-4 text-gray-500">PLAN 8</li>
                 </ul>
               </div>
             </li>
             <li>
               <div
-                className={`flex justify-left items-center w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 3 ? "border-black" : ""}`}
+                className={`flex justify-left items-center font-semibold w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 3 ? "border-black" : ""}`}
                 onClick={() => handleClick(3)}
               >
                 Media
@@ -104,14 +104,14 @@ const Nav = (props: Props) => {
                 }`}
               >
                 <ul>
-                  <li className="p-4">Press Releases</li>
-                  <li className="p-4">Global Lab</li>
+                  <li className="p-4 text-gray-500">Press Releases</li>
+                  <li className="p-4 text-gray-500">Events</li>
                 </ul>
               </div>
             </li>
             <li>
               <div
-                className={`flex justify-left items-center w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 4 ? "border-black" : ""}`}
+                className={`flex justify-left items-center font-semibold w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 4 ? "border-black" : ""}`}
                 onClick={() => handleClick(4)}
               >
                 Culture
@@ -122,15 +122,14 @@ const Nav = (props: Props) => {
                 }`}
               >
                 <ul>
-                  <li className="p-4">About Us</li>
-                  <li className="p-4">Global Lab</li>
-                  <li className="p-4">CCP</li>
+                  <li className="p-4 text-gray-500">Culture</li>
+                  <li className="p-4 text-gray-500">Pearl Abyss News</li>
                 </ul>
               </div>
             </li>
             <li>
               <div
-                className={`flex justify-left items-center w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 5 ? "border-black" : ""}`}
+                className={`flex justify-left items-center font-semibold w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 5 ? "border-black" : ""}`}
                 onClick={() => handleClick(5)}
               >
                 Careers
@@ -141,18 +140,19 @@ const Nav = (props: Props) => {
                 }`}
               >
                 <ul>
-                  <li className="p-4">About Us</li>
-                  <li className="p-4">Global Lab</li>
-                  <li className="p-4">CCP</li>
+                  <li className="p-4 text-gray-500">Careers</li>
+                  <li className="p-4 text-gray-500">Job Postings</li>
+                  <li className="p-4 text-gray-500">Europe Office</li>
+                  <li className="p-4 text-gray-500">North America Office</li>
                 </ul>
               </div>
             </li>
             <li>
               <div
-                className={`flex justify-left items-center w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 6 ? "border-black" : ""}`}
+                className={`flex justify-left items-center font-semibold w-full h-14 mt-1 mb-1 px-4 border-b-2 ${showList === 6 ? "border-black" : ""}`}
                 onClick={() => handleClick(6)}
               >
-                Investor
+                Investors
               </div>
               <div
                 className={`pt-2 ${
@@ -160,9 +160,12 @@ const Nav = (props: Props) => {
                 }`}
               >
                 <ul>
-                  <li className="p-4">About Us</li>
-                  <li className="p-4">Global Lab</li>
-                  <li className="p-4">CCP</li>
+                  <li className="p-4 text-gray-500">Governance</li>
+                  <li className="p-4 text-gray-500">Stock Info</li>
+                  <li className="p-4 text-gray-500">Financial Info</li>
+                  <li className="p-4 text-gray-500">IR Notices</li>
+                  <li className="p-4 text-gray-500">IR Release</li>
+                  <li className="p-4 text-gray-500">Sustainability</li>
                 </ul>
               </div>
             </li>
